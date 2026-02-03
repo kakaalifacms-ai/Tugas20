@@ -33,7 +33,11 @@ button {
 }
 button:hover {
   background:#FF0000;
-
+}
+button:disabled {
+  background: #03FF26;
+  cursor: not-allowed;
+}
 #hasil {
   margin-top: 15px;
   font-size: 14px;
@@ -45,10 +49,4 @@ button:hover {
   padding-top: 10px;
   border-top: 1px solid #ccc;
   font-weight: bold;
-}
-
-button:disabled{
- background:#03FF26;
- cursor: not-allowed;
-}
 }
