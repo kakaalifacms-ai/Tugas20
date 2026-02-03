@@ -31,10 +31,8 @@ button {
   font-size: 15px;
   cursor: pointer;
 }
-
 button:hover {
-  background: #00FF22;
-}
+  background:#FF0000;
 
 #hasil {
   margin-top: 15px;
@@ -52,4 +50,5 @@ button:hover {
 button:disabled{
  background:#03FF26;
  cursor: not-allowed;
+}
 }

@@ -29,5 +29,42 @@ function process() {
   document.getElementById("hasil").innerHTML = "Data barang berhasil diinput.(jumlah barang:"+dataBarang.length +")"
 }
 
-function cetak(){
+function Cetak(){ 
+let total = 0
+let output = ""
+
+// loop input harga barang dari array global data barang
+for(let i =0; i <dataBarang.length; i++) {
+  let harga = dataBarang[i]
+  total+= harga
+  
+  output+= "Barang ke-"+(i+i) + ": Rp " + rupiah(harga) + "<br>"
 }
+
+// HITUNG
+let diskon = 0
+if (total > 500000) {
+  diskon = total * 0.2
+}
+
+let setelahDiskon = total - diskon
+
+// HITUNG PPN
+let ppn = setelahDiskon * 0.1
+
+// TOTAL BAYAR
+let totalBayar = setelahDiskon + ppn
+
+// OUTPUT RINGKASAN
+output += `
+    <div class="ringkasan">
+      Total belanja: Rp ${rupiah(total)}<br>
+      Diskon: Rp ${rupiah(diskon)}<br>
+      PPN 10%: Rp ${rupiah(ppn)}<br>
+      Total bayar: Rp ${rupiah(totalBayar)}
+    </div>
+  `
+
+document.getElementById("hasil").innerHTML = output
+}
+ 
