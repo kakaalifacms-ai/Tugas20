@@ -38,7 +38,7 @@ for(let i =0; i <dataBarang.length; i++) {
   let harga = dataBarang[i]
   total+= harga
   
-  output+= "Barang ke-"+(i+i) + ": Rp " + rupiah(harga) + "<br>"
+  output+= "Barang ke-"+(1+i) + ": Rp " + rupiah(harga) + "<br>"
 }
 
 // HITUNG
